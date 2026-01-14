@@ -12,6 +12,18 @@
 		"ghcr.io/cirolosapio/devcontainers-features/alpine-openssh:0": {}
 	}
 
+
+	,"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"Orta.vscode-jest",
+				"christian-kohler.npm-intellisense",
+				"eg2.vscode-npm-script"
+			]
+		}
+	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
