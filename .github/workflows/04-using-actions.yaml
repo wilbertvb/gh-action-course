@@ -1,0 +1,29 @@
+name: 04 - Using Actions
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # No global installation
+    # -- npx create-react-app --template typescript react-app
+    # -- cd react-app && npm run start
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Printing Folders
+        run: ls -a
+      # 1. Install deps of our react application
+    #   - name: Set up Node.js
+    #     uses: actions/setup-node@v3
+    #     with:
+    #       node-version: '16'
+
+    #   - name: Install dependencies
+    #     run: npm install
+    #  # 2. Execute automated tests
+    #   - name: Run tests
+    #     run: npm test
