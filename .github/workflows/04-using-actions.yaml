@@ -9,6 +9,7 @@ jobs:
     # No global installation
     # -- npx create-react-app --template typescript react-app
     # -- cd react-app && npm run start
+    # -- recreate lock run npm install
 
     steps:
       # Checkout the code from the repository
@@ -20,11 +21,7 @@ jobs:
         with:
           node-version: '20.x'
       - name: Install dependencies
-        run: |
-          ls 04-using-actions
-          ls 04-using-actions/react-app
-          cd 04-using-actions/react-app
-          npm ci
+        run: npm ci
         working-directory: 04-using-actions/react-app
     #  # 2. Execute automated tests
     #   - name: Run tests
